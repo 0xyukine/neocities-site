@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HI☆FU☆MI</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="icon" href="images/favicon.jpg">
+	</head>
+	<script>
+		let pages = {pawtist:"pawtist.html",about:"about.html",socials:"socials.html",media:"media.html",nanachis:"nanachis.html",paw:"paw.html"};
+		document.addEventListener("DOMContentLoaded", (event) => {
+			let param  = new URLSearchParams(document.location.search).get("frame");
+			let iframe = document.getElementsByName("content-iframe")[0]; 
+			if (param) {
+				if (Object.keys(pages).includes(param)) {
+					iframe.src=`${param}.html`;
+				}
+			}
+			window.history.replaceState({}, document.title, "home.html");
+
+			let nav_elements = document.querySelectorAll('[id=nav]');
+	
+			let replaceIframe = function() {
+				if (Object.keys(pages).includes(this.title)) {
+					iframe.contentDocument.location.replace(pages[this.title]);
+				}
+			}
+	
+			for (var i = 0; i < nav_elements.length; i++) {
+				nav_elements[i].addEventListener('click', replaceIframe);
+			}
+
+			iframe.onload = function() {
+				document.title = iframe.contentDocument.title;
+			};
+		});
+	</script>
+	<body>
+		<div class="container">
+			<div class="left"></div>
+			<div class="sidebar">
+				<div id="nana_still">
+					<a href="https://pawoo.net/@sbsb/103142163221937224" target="_blank"><img src="images/bunny.png"></a>
+				</div>
+				<div id="nana_anim">
+					<img src="images/bunny.gif">
+				</div>
+				<div>
+					<h2>Hifumi's Site</h2>
+					<ul>
+						<h3>Navigation</h3>
+						<li><a title="index" href="index.html">←</a></li>
+						<li><a id="nav" title="pawtist" href="pawtist.html" target="content-iframe">Home</a></li>
+						<li><a id="nav" title="about" href="about.html" target="content-iframe">About</a></li>
+						<li><a id="nav" title="socials" href="socials.html" target="content-iframe">Socials</a></li>
+						<li><a id="nav" title="media" href="media.html" target="content-iframe">Media</a></li>
+						<li><a id="nav" title="nanachis" href="nanachis.html" target="content-iframe">Nanachis</a></li>
+						<li><a id="nav" title="paw" href="paw.html" target="content-iframe">Impawssible</a></li>
+					</ul>
+				</div>
+				<h3>Recent tracks</h3>
+				<object style="width:100%;" data="https://lastfm-recently-played.vercel.app/api?user=nyanguard&count=10&header_style=compact_stats_only&width=300" type="image/svg+xml"></object>
+			</div>
+			<div class="content">
+				<iframe src="pawtist.html" name="content-iframe"></iframe>
+			</div>
+			<div class="right">
+				<a href="https://x.com/karepack77/status/1776614939769393323" target="_blank"><img src="images/frieren.png"></a>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			#nana {display: none;}
+			details:hover #nana {display: block;}
+
+			.container {
+				display: grid;
+				grid-gap: 20px;
+				grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+				grid-auto-flow: dense;
+			}
+
+			div.item img {
+				width: 100%;
+			}
+
+			img:hover,
+			img:focus {
+				transition: .2s;
+				transform: scale(1.15)
+			}
+
+			:root {
+				background: linear-gradient(#2d2e32,#474654)
+			}
+		</style>
+	</head>
+	<body>
+		<div style="height: 480px; width: 480px">
+			<details style="position: relative">
+				<summary style="font-size:0px;" tabindex="0">
+					<div style="min-width:100%; min-height:480px; background-image:url('images/bunny.png');"></div>
+				</summary>
+				<div id="nana" style="position: absolute; min-width: 100%; min-height:480px; top:0px; bottom:0px; background-image:url('images/bunny.gif'); background-repeat: no-repeat; pointer-events:none;"></div>
+			</details>
+		</div>
+		<div class="container">
+			<div class="item item01">
+				<img src="https://img3.gelbooru.com//images/be/d2/bed2cb253aaf776172e34572020fcbfa.jpg"/>
+			</div>
+			<div class="item item02">
+				<img src="https://img3.gelbooru.com//samples/7a/85/sample_7a8588c43413da1d5269271232536044.jpg"/>
+			</div>
+			<div class="item item03">
+				<img src="https://img3.gelbooru.com//samples/02/7c/sample_027c8c0a71dc8e2fa6c9fa0667a625ec.jpg"/>
+			</div>
+			<div class="item item04">
+				<img src="https://img3.gelbooru.com//samples/ae/04/sample_ae043a0dd0eb7d9ca1505a4ec89bf233.jpg"/>
+			</div>
+			<div class="item item05">
+				<img src="https://img3.gelbooru.com//samples/00/92/sample_009225e1cfeefba29a6e091df4afc440.jpg"/>
+			</div>
+			<div class="item item06">
+				<img src="https://img3.gelbooru.com//images/a0/ab/a0ab41036875e0896e316bb0b7f8b268.jpg"/>
+			</div>
+			<div class="item item07">
+				<img src="https://img3.gelbooru.com//images/a8/66/a866b02f40949be78cdbd9b4bbb98ab9.jpg"/>
+			</div>
+			<div class="item item08">
+				<img src="https://img3.gelbooru.com//samples/f0/6f/sample_f06fc701bfb3cc237a7c25c4d558a4a8.jpg"/>
+			</div>
+			<div class="item item09">
+				<img src="https://img3.gelbooru.com//samples/52/dd/sample_52ddbe7ad1d4e94d2673c07dee31e666.jpg"/>
+			</div>
+			<div class="item item10">
+				<img src="https://img3.gelbooru.com//samples/64/0d/sample_640d2be761375fcff629fdc89d18ec43.jpg"/>
+			</div>
+			<div class="item item11">
+				<img src="https://img3.gelbooru.com//samples/84/27/sample_8427421d3496686bcb2e56fb2d839381.jpg"/>
+			</div>
+			<div class="item item12">
+				<img src="https://img3.gelbooru.com//samples/93/63/sample_9363086f1a6a0199271effc30be87946.jpg"/>
+			</div>
+			<div class="item item13">
+				<img src="https://img3.gelbooru.com//samples/71/b7/sample_71b7e315e48841b880e3177b25291bad.jpg"/>
+			</div>
+			<div class="item item14">
+				<img src="https://img3.gelbooru.com//samples/5a/90/sample_5a90481600b88aeeba16a3ed8a44565b.jpg"/>
+			</div>
+			<div class="item item15">
+				<img src="https://img3.gelbooru.com//samples/ba/7f/sample_ba7fb4ceab0251e68e8c961b0c79cb13.jpg"/>
+			</div>
+			<div class="item item16">
+				<img src="https://img3.gelbooru.com//samples/97/c9/sample_97c956855a9cf10db1722179792f5490.jpg"/>
+			</div>
+			<div class="item item17">
+				<img src="https://img3.gelbooru.com//samples/42/be/sample_42be2cdc775da3b4dc6e7a37884930e4.jpg"/>
+			</div>
+			<div class="item item18">
+				<img src="https://img3.gelbooru.com//samples/be/28/sample_be282a83c329714ed177fee4f1a9adb5.jpg"/>
+			</div>
+			<div class="item item19">
+				<img src="https://img3.gelbooru.com//samples/1d/17/sample_1d177c827e75baccb6b5d4832dc97f16.jpg"/>
+			</div>
+			<div class="item item20">
+				<img src="https://img3.gelbooru.com//images/46/11/46116eb73e0964bb20b093b28a7bae82.png"/>
+			</div>
+		</div>
+	</body>
+</html>
