@@ -72,16 +72,24 @@ ul {
 }
 
 li {
-    /* background: var(--mane); */
+    border-bottom: dashed var(--underbelly) 2px;
     padding: 5px;
     padding-left: 0;
-    border-bottom: dashed var(--underbelly) 2px;
-    /* border-radius: 25px; */
+    vertical-align: middle;
+    /* position: relative; */
+}
+
+svg {
+    fill: var(--tail);
+    height: 1em;
+    display: inline-block;
+    /* position: absolute; */
 }
 
 li i {
     color: var(--tail);
     padding-right: 5px;
+    display: inline-block;
 }
 
 .content ul {

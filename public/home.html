@@ -6,24 +6,24 @@
 		<link rel="icon" href="images/favicon.jpg">
 	</head>
 	<script>
-		let pages = {pawtist:"pawtist.html",about:"about.html",socials:"socials.html",media:"media.html",nanachis:"nanachis.html",paw:"paw.html"};
+		var pages = {pawtist:"pawtist.html",about:"about.html",socials:"socials.html",media:"media.html",nanachis:"nanachis.html",paw:"paw.html"};
 		document.addEventListener("DOMContentLoaded", (event) => {
-			let param  = new URLSearchParams(document.location.search).get("frame");
-			let iframe = document.getElementsByName("content-iframe")[0]; 
+			var param  = new URLSearchParams(document.location.search).get("frame");
+			var iframe = document.getElementsByName("content-iframe")[0]; 
 			if (param) {
 				if (Object.keys(pages).includes(param)) {
 					iframe.src=`${param}.html`;
+					window.history.replaceState({}, document.title, "home.html");
 				}
 			}
-			window.history.replaceState({}, document.title, "home.html");
 
-			let nav_elements = document.querySelectorAll('[id=nav]');
+			var nav_elements = document.querySelectorAll('[id=nav]');
 	
-			let replaceIframe = function() {
+			var replaceIframe = function() {
 				if (Object.keys(pages).includes(this.title)) {
 					iframe.contentDocument.location.replace(pages[this.title]);
 				}
-			}
+			};
 	
 			for (var i = 0; i < nav_elements.length; i++) {
 				nav_elements[i].addEventListener('click', replaceIframe);
