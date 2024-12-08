@@ -6,7 +6,9 @@
 
     font-family: Arial, Helvetica, sans-serif;
 
-    background: repeating-linear-gradient(var(--coat),var(--underbelly) 8px);
+    /* background: repeating-linear-gradient(var(--coat),var(--underbelly) 8px); */
+    background-color: var(--mane);
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
     height: 100vh;
 }
 
@@ -69,18 +71,46 @@ iframe {
     padding-right: inherit;
 }
 
-ul {
+.sidebar ul, .socials {
     list-style: '💢';
     list-style-position: inside;
     padding-left: 0;
 }
 
-li {
+.sidebar li, .socials li {
     border-bottom: dashed var(--underbelly) 2px;
     padding: 5px;
     padding-left: 0;
     vertical-align: middle;
     position: relative;
+}
+
+details {
+  width: 50%
+}
+
+details ul {
+  padding-left: 1em;
+  list-style-position: inside;
+}
+
+details li {
+  list-style: '-';
+  position: relative;
+  text-align: left;
+}
+
+.author {
+  list-style: '☆';
+}
+
+.series {
+  list-style: '+';
+}
+
+details {
+  border-bottom: dashed var(--underbelly) 2px;
+  color: var(--tail);
 }
 
 svg {
@@ -111,6 +141,11 @@ li:not(:last-child) {
 .sidebar,
 .content {
     margin: 8px 0 8px;
+}
+
+#media details {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .centre {
