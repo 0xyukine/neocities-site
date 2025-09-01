@@ -225,7 +225,14 @@ li:hover::before {
     background-size: 100% 2px, 3px 100%;
     pointer-events: none;
     animation: flicker 0.15s infinite;
-}  
+}
+
+.socials li a::before {
+    content: url(images/logos/letterboxd-decal-dots-neg-mono.svg);
+    display: inline-block;
+    height:1em;
+    width:1em;
+}
 
 @keyframes flicker {
     0% {
