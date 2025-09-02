@@ -79,8 +79,7 @@ iframe {
 
 .sidebar li, .socials li {
     border-bottom: dashed var(--underbelly) 2px;
-    padding: 5px;
-    padding-left: 0;
+    padding: 8px 0px 8px 0px;
     vertical-align: middle;
     position: relative;
 }
@@ -134,9 +133,9 @@ li i {
     list-style: none;
 }
 
-li:not(:last-child) {
+/* li:not(:last-child) {
     margin: 0 0 4px 0;
-}
+} */
 
 .sidebar,
 .content {
@@ -227,11 +226,25 @@ li:hover::before {
     animation: flicker 0.15s infinite;
 }
 
+.socials li a {
+  position:relative;
+}
+
 .socials li a::before {
-    content: url(images/logos/letterboxd-decal-dots-neg-mono.svg);
-    display: inline-block;
+    content: '';
+    /* display: inline-block; */
+    background:
+      var(--site-icon) no-repeat content-box center / contain;
     height:1em;
     width:1em;
+    padding-right: 0.25em;
+    position: absolute;
+    top: 0;
+    left: -1.25em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 @keyframes flicker {
