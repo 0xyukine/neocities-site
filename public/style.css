@@ -55,7 +55,8 @@ iframe {
 .content p,
 .content h1,
 .content h2,
-.content h3 {
+.content h3,
+.content span {
     color: var(--tail);
     text-align: center;
 }
@@ -71,13 +72,13 @@ iframe {
     padding-right: inherit;
 }
 
-.sidebar ul, .socials {
+.sidebar ul, .socials, .dailies {
     list-style: '💢';
     list-style-position: inside;
     padding-left: 0;
 }
 
-.sidebar li, .socials li {
+.sidebar li, .socials li, .dailies li {
     border-bottom: dashed var(--underbelly) 2px;
     padding: 8px 0px 8px 0px;
     vertical-align: middle;
@@ -226,11 +227,15 @@ li:hover::before {
     animation: flicker 0.15s infinite;
 }
 
-.socials li a {
+.socials li a,
+.dailies li a,
+.dalies span {
   position:relative;
 }
 
-.socials li a::before {
+.socials li a::before,
+.dailies li a::before,
+.dalies span {
     content: '';
     /* display: inline-block; */
     background:
