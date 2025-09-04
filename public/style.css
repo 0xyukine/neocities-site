@@ -229,13 +229,13 @@ li:hover::before {
 
 .socials li a,
 .dailies li a,
-.dalies span {
+.dailies li span {
   position:relative;
 }
 
 .socials li a::before,
 .dailies li a::before,
-.dalies span {
+.dailies li span::before {
     content: '';
     /* display: inline-block; */
     background:
